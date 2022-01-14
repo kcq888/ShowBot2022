@@ -17,15 +17,15 @@ public class ChassisSubsystem extends SubsystemBase {
     LEFT, RIGHT;
   }
 
-  Talon frontLeftMotor_ = new Talon(Constants.FRONT_LEFT_MOTOR);
-  Talon frontRightMotor_ = new Talon(Constants.FRONT_RIGHT_MOTOR);
-  Talon rearLeftMotor_ = new Talon(Constants.REAR_LEFT_MOTOR);
-  Talon rearRightMotor_ = new Talon(Constants.REAR_RIGHT_MOTOR);
+  private Talon frontLeftMotor_ = new Talon(Constants.FRONT_LEFT_MOTOR);
+  private Talon frontRightMotor_ = new Talon(Constants.FRONT_RIGHT_MOTOR);
+  private Talon rearLeftMotor_ = new Talon(Constants.REAR_LEFT_MOTOR);
+  private Talon rearRightMotor_ = new Talon(Constants.REAR_RIGHT_MOTOR);
 
-  MotorControllerGroup leftMotors_ = new MotorControllerGroup(frontLeftMotor_, frontLeftMotor_);
-  MotorControllerGroup rightMotors_ = new MotorControllerGroup(frontRightMotor_, rearRightMotor_);
+  private MotorControllerGroup leftMotors_ = new MotorControllerGroup(frontLeftMotor_, rearLeftMotor_);
+  private MotorControllerGroup rightMotors_ = new MotorControllerGroup(frontRightMotor_, rearRightMotor_);
 
-  DifferentialDrive driveTrain_ = new DifferentialDrive(leftMotors_, rightMotors_);
+  private DifferentialDrive driveTrain_ = new DifferentialDrive(leftMotors_, rightMotors_);
 
   //drive constants
   /**
